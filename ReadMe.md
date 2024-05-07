@@ -20,7 +20,7 @@ The 🔍 MATCH project is structured into three core components:
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.10 or higher
 - Streamlit
 - OpenAI Python client
 - AWS CLI configured with appropriate permissions
@@ -28,54 +28,46 @@ The 🔍 MATCH project is structured into three core components:
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/your-repo/match-mission-alignment.git
+`git clone https://github.com/Silv3rcrowss/MATCH.git`
 
 2. Navigate to the project directory:
-cd match-mission-alignment
+`cd MATCH`
 
 3. Install the required Python packages:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 ### Running the Application
 
 To run the application, execute the following command in your terminal:
 
-streamlit run cv_assistant.py
-
+`streamlit run cv_assistant.py`
 
 This will start the Streamlit server, and you can access the application by navigating to the provided URL in your web browser.
 
 ## Usage
 
-# Step 1: Open the 🔍 MATCH Application
+#### Step 1: Open the 🔍 MATCH Application
 Access the 🔍 MATCH application through your preferred web browser. Since it is a proof of concept, there is no login required at this stage.
 
-# Step 2: Entering Mission Requirements
-Navigate to the "Mission Requirements" section to input specific details about the mission you are staffing. Here, you can enter skills, required experiences, preferred certifications, and other relevant details for the mission.
+#### Step 2: Engage with the MATCH Assistant
+Interact with the MATCH assistant directly through the natural language input field located on the main page. Simply type your query or instruction related to the consultant profiles or mission details and press 'Enter' or click the 'Send' button.
 
-# Step 3: Initiate the Matching Process
-Click on "Match Candidates" to start the analysis. 🔍 MATCH, already pre-loaded with a comprehensive resume database, utilizes AI-driven algorithms to identify the best candidates for the specified mission requirements.
+#### Step 3: Query Specific Details or Actions
+You can perform specific queries such as "Tell me more about [Consultant's Name]" or "Find candidates for [specific mission requirements]". The assistant utilizes a retrieval-augmented generation model to analyze the embedded resume knowledge base and provide relevant information.
 
-# Step 4: Review Matched Candidates
-The application will display a list of candidates who best match the mission criteria. For each candidate, you will see details such as their current role, specialized skills, relevant experiences, and certifications.
+#### Step 4: Review Responses and Further Interact
+After submitting your query, the assistant will process the input and display a detailed response. You can continue the conversation by asking more specific questions or requesting further details about a candidate or a mission. Each interaction is designed to refine the results and assist you in making the best decisions.
 
-# Step 5: Detailed Examination and Conversation
+#### Step 5: Detailed Examination and Conversation
 Leverage the conversational interface to inquire further about each candidate. The system, using a light RAG (retrieval augmented generation) implementation of a GPT-assistant, can pull detailed insights and contextual information from the integrated knowledge base.
 
-# Step 6: Making a Decision
+#### Step 6: Making a Decision
 Select the most appropriate consultant for the mission based on the detailed analysis provided. The interface allows you to note decisions and rationale for future reference.
 
-# Step 7: Extend and Customize
-🔍 MATCH is not only designed for analyzing resumes but also serves as a platform for creating new GPT-assistant instances with different directives. The included codebase allows you to provide any files as a knowledge base and tailor the assistant to meet specific needs.
-## Contributing
-
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
+#### Step 7: Extend and Customize
+While primarily designed for resume and mission matching, 🔍 MATCH also supports creating new GPT-assistant instances for various purposes. Utilize the provided codebase to adapt the assistant for different datasets or directives, enhancing its utility across different contexts.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Contact
-
-For any questions or support, please contact the project maintainers at [your-email@example.com](mailto:your-email@example.com).

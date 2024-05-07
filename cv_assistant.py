@@ -32,8 +32,8 @@ st.subheader("🔍 MATCH: Mission Alignment and Talent Candidate Hub")
 
 if "conversation" not in st.session_state:
     st.session_state.conversation = Conversation(
-        credential_name="Micropole/resume_assistant",
-        region_name="eu-west-1",
+        credential_name="my_secret",
+        region_name="region",
     )
 
 
