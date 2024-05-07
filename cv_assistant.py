@@ -25,10 +25,15 @@ def display_message_history(message_history):
             )
 
 
-st.set_page_config(page_title="Resume Assistant", page_icon="🔍")
+st.set_page_config(
+    page_title="Resume Assistant", page_icon=ROLE_AVATARS["assistant"]
+)
 
 st.title("Resume Assistant")
-st.subheader("🔍 MATCH: Mission Alignment and Talent Candidate Hub")
+st.subheader(
+    f"{ROLE_AVATARS['assistant']} MATCH: Mission Alignment and Talent"
+    " Candidate Hub"
+)
 
 if "conversation" not in st.session_state:
     st.session_state.conversation = Conversation(
@@ -69,7 +74,9 @@ if prompt := st.chat_input(placeholder="Comment puis-je vous aider ?"):
 
     st.session_state.conversation.create_message(prompt)
     st.session_state.text_boxes.append(st.empty())
-    st.session_state.text_boxes[-1].success(f"**> 🤔 User:** {prompt}")
+    st.session_state.text_boxes[-1].success(
+        f"**> {ROLE_AVATARS['user']} User:** {prompt}"
+    )
 
     with st.session_state.conversation.client.beta.threads.runs.stream(
         thread_id=st.session_state.conversation.thread.id,
