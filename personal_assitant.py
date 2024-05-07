@@ -1,5 +1,4 @@
 import logging
-from math import log
 import sys
 from openai import OpenAI
 from common import get_secret, retrieve_file_list_from_folder
