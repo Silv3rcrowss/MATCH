@@ -47,25 +47,25 @@ This will start the Streamlit server, and you can access the application by navi
 
 ## Usage
 
-#### Step 1: Open the 🔍 MATCH Application
+### Step 1: Open the 🔍 MATCH Application
 Access the 🔍 MATCH application through your preferred web browser. Since it is a proof of concept, there is no login required at this stage.
 
-#### Step 2: Engage with the MATCH Assistant
+### Step 2: Engage with the MATCH Assistant
 Interact with the MATCH assistant directly through the natural language input field located on the main page. Simply type your query or instruction related to the consultant profiles or mission details and press 'Enter' or click the 'Send' button.
 
-#### Step 3: Query Specific Details or Actions
+### Step 3: Query Specific Details or Actions
 You can perform specific queries such as "Tell me more about [Consultant's Name]" or "Find candidates for [specific mission requirements]". The assistant utilizes a retrieval-augmented generation model to analyze the embedded resume knowledge base and provide relevant information.
 
-#### Step 4: Review Responses and Further Interact
+### Step 4: Review Responses and Further Interact
 After submitting your query, the assistant will process the input and display a detailed response. You can continue the conversation by asking more specific questions or requesting further details about a candidate or a mission. Each interaction is designed to refine the results and assist you in making the best decisions.
 
-#### Step 5: Detailed Examination and Conversation
+### Step 5: Detailed Examination and Conversation
 Leverage the conversational interface to inquire further about each candidate. The system, using a light RAG (retrieval augmented generation) implementation of a GPT-assistant, can pull detailed insights and contextual information from the integrated knowledge base.
 
-#### Step 6: Making a Decision
+### Step 6: Making a Decision
 Select the most appropriate consultant for the mission based on the detailed analysis provided. The interface allows you to note decisions and rationale for future reference.
 
-#### Step 7: Extend and Customize
+### Step 7: Extend and Customize
 While primarily designed for resume and mission matching, 🔍 MATCH also supports creating new GPT-assistant instances for various purposes. Utilize the provided codebase to adapt the assistant for different datasets or directives, enhancing its utility across different contexts.
 
 ## License
