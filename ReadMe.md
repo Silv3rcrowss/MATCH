@@ -2,7 +2,7 @@
 
 ## Overview
 
-🔍 MATCH is an application designed to serve as a copilot for analyzing consultant resumes. It aims to match the skills, experiences, and interests of consultants with the missions that best align with them. Leveraging the power of the OpenAI API, 🔍 MATCH provides intelligent insights and suggestions to help consulting sales representative navigate their client interactions more effectively and efficiently.
+🔍 MATCH is an AI application designed to serve as a copilot for analyzing consultant resumes. It aims to match the skills, experiences, and interests of consultants with the missions that best align with them. Leveraging the power of the OpenAI API, 🔍 MATCH provides intelligent insights and suggestions to help consulting sales representative navigate their client interactions more effectively and efficiently.
 By streamlining the process of resume analysis, 🔍 MATCH ensures that consultants are paired with projects that not only suit their skill set but also enhance their career growth. This alignment leads to higher job satisfaction and better outcomes for both consultants and clients. Additionally, the application features a user-friendly interface that makes accessing and interpreting data straightforward for consulting sales representatives. 
 Whether dealing with large volumes of resumes or searching for the ideal candidate for a niche mission, 🔍 MATCH optimizes the selection process, enabling sales representatives to focus more on building relationships and closing deals.
 
