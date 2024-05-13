@@ -17,10 +17,10 @@ def display_message_history(message_history):
 
     for message in message_history:
         with st.chat_message(
-            message.role, avatar=st.session_state.role_avatars[message.role]
+            message.role, avatar=st.session_state.ROLE_AVATARS[message.role]
         ):
             st.markdown(
-                f"{st.session_state.roles[message.role]} :"
+                f"{ROLES_PREFIX[message.role]} :"
                 f" {message.content[0].text.value}"
             )
 
@@ -60,11 +60,6 @@ if "disabled" not in st.session_state:
 if "text_boxes" not in st.session_state:
     st.session_state.text_boxes = []
 
-if "role_avatars" not in st.session_state:
-    st.session_state.role_avatars = ROLE_AVATARS
-
-if "roles" not in st.session_state:
-    st.session_state.roles = ROLES_PREFIX
 
 display_message_history(
     message_history=st.session_state.conversation.retrieve_messages_from_thread()

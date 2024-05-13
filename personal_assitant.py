@@ -150,29 +150,35 @@ class AssistantManagement:
         )
 
         file_paths = retrieve_file_list_from_folder(folder_path=folder_path)
-        # Load profided the files into a list of file streams
-        file_streams = []
-        for file_path in file_paths:
-            with open(file=file_path, mode="rb") as file:
-                file_streams.append(file)
-        # Upload the files to the vector store
-        file_batch = (
-            self.client.beta.vector_stores.file_batches.upload_and_poll(
-                vector_store_id=self.vector_store.id, files=file_streams
-            )
-        )
-        logging.info(msg=f"File upload status: {file_batch.status}")
-        # We check if all files were uploaded successfully
-        if file_batch.file_counts.completed != len(file_paths):
-            logging.warning(
-                msg=(
-                    "Some files could not be uploaded. File count:"
-                    f" {file_batch.file_counts}"
+        try:
+            # Load profided the files into a list of file streams
+            file_streams = [open(file=path, mode="rb") for path in file_paths]
+
+            # Upload the files to the vector store
+            file_batch = (
+                self.client.beta.vector_stores.file_batches.upload_and_poll(
+                    vector_store_id=self.vector_store.id, files=file_streams
                 )
             )
-            # raise Exception("File upload failed")
-        else:
-            logging.info(msg="All files uploaded successfully")
+
+            logging.info(f"File upload status: {file_batch.status}")
+
+            # We check if all files were uploaded successfully
+            if file_batch.file_counts.completed != len(file_paths):
+                logging.warning(
+                    msg=(
+                        "Some files could not be uploaded. File count:"
+                        f" {file_batch.file_counts}"
+                    )
+                )
+                # raise Exception("File upload failed")
+            else:
+                logging.info("All files uploaded successfully")
+
+        finally:
+            # Ensure all file streams are closed properly
+            for file in file_streams:
+                file.close()
         return self.vector_store.id
 
     def create_new_assistant(

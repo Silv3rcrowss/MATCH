@@ -1,20 +1,21 @@
 # 🔍 MATCH: Mission Alignment and Talent Candidate Hub
 
 ## Overview
+Welcome to 🔍 MATCH, an AI-powered application designed to match consultant resumes with suitable missions. Leveraging OpenAI's GPT-4, this tool provides a seamless way to analyze resumes, match skills and experiences, and offer intelligent insights to consulting sales representatives.
 
-🔍 MATCH is an AI application designed to serve as a copilot for analyzing consultant resumes. It aims to match the skills, experiences, and interests of consultants with the missions that best align with them. Leveraging the power of the OpenAI API, 🔍 MATCH provides intelligent insights and suggestions to help consulting sales representative navigate their client interactions more effectively and efficiently.
-By streamlining the process of resume analysis, 🔍 MATCH ensures that consultants are paired with projects that not only suit their skill set but also enhance their career growth. This alignment leads to higher job satisfaction and better outcomes for both consultants and clients. Additionally, the application features a user-friendly interface that makes accessing and interpreting data straightforward for consulting sales representatives. 
-Whether dealing with large volumes of resumes or searching for the ideal candidate for a niche mission, 🔍 MATCH optimizes the selection process, enabling sales representatives to focus more on building relationships and closing deals.
+## Features
 
-## Project Structure
+- **AI-Powered Insights**: Utilizes GPT-4 with the latest assistant features for deep contextual understanding and response generation.
+- **Efficient Matching**: Leverages a retrieval augmented generation (RAG) model to find the best matches between consultants and missions.
+- **Streamlit Interface**: Provides an easy-to-use, conversational UI where users can input requirements and interact with the AI.
+- **Document Retrieval**: Integrates a vector store for efficient searching through a large number of documents, enabling quick retrieval of relevant resume details.
 
-The 🔍 MATCH project is structured into three core components:
+## Components
 
-1. **cv_assistant.py**: This is the heart of the application, where the Streamlit interface is set up. It handles user interactions, displays the conversation history, and manages the application's state using Streamlit's session state.
+- **cv_assistant.py**: Main application file with Streamlit interface, managing user interactions and state.
+- **common.py**: Contains utility functions and classes for AWS interactions, file operations, and event handling.
+- **personal_assistant.py**: Handles communication with the OpenAI API, including managing conversations and vector stores.
 
-2. **common.py**: Contains utility functions and classes that are utilized across the application. This includes AWS service interactions, file operations, and a custom event handler for the assistant stream.
-
-3. **personal_assitant.py**: Manages the interaction with the OpenAI API. It includes classes for creating and managing conversations, as well as for managing assistants and vector stores.
 
 ## Getting Started
 
@@ -45,6 +46,10 @@ To run the application, execute the following command in your terminal:
 
 This will start the Streamlit server, and you can access the application by navigating to the provided URL in your web browser.
 
+## Configuration
+- Please adjust paths, dependency versions, and personal information as necessary to fit your project specifics and organizational guidelines.
+- Ensure your AWS credentials are configured to use services such as Secret Manager for credential retrieval, or set up environment variables for OpenAI API keys for seamless integration.
+
 ## Usage
 
 ### Step 1: Open the 🔍 MATCH Application
@@ -62,10 +67,7 @@ After submitting your query, the assistant will process the input and display a 
 ### Step 5: Detailed Examination and Conversation
 Leverage the conversational interface to inquire further about each candidate. The system, using a light RAG (retrieval augmented generation) implementation of a GPT-assistant, can pull detailed insights and contextual information from the integrated knowledge base.
 
-### Step 6: Making a Decision
-Select the most appropriate consultant for the mission based on the detailed analysis provided. The interface allows you to note decisions and rationale for future reference.
-
-### Step 7: Extend and Customize
+### Step 6: Extend and Customize
 While primarily designed for resume and mission matching, 🔍 MATCH also supports creating new GPT-assistant instances for various purposes. Utilize the provided codebase to adapt the assistant for different datasets or directives, enhancing its utility across different contexts.
 
 ## License
